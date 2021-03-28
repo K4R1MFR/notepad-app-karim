@@ -26,9 +26,9 @@ export default function Row(props) {
             </div>
 
         {/* button to delete note */}
-        {/* <button
+        <button
             onClick={props.onDelete}
-        >Delete</button> */}
+        >Delete</button>
 
         </div>
     )
