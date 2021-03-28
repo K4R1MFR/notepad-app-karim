@@ -7,7 +7,6 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
-import AwesomeButtonCssModule from 'react-awesome-button/dist/styles.css';
 
 
 export default function Home(){
@@ -37,9 +36,7 @@ export default function Home(){
             })}
                 <AwesomeButton 
                     type="primary" 
-                    // onPress={() => (history.push('/pages/AddNote'))}
-                    onPress={() => alert("test GitHub")}
-
+                    onPress={() => (history.push('/pages/AddNote'))}
                 
                 >Add Note</AwesomeButton>
         </div>

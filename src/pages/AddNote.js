@@ -8,8 +8,6 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
-import AwesomeButtonCssModule from 'react-awesome-button/dist/styles.css';
-
 export default function AddNote(){
 
     const [ title, setTitle ] = useState("");

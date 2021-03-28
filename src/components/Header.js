@@ -5,7 +5,7 @@ import {
     removeItem
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
-import { AwesomeButton, AwesomeButtonProgress } from 'react-awesome-button';
+import { AwesomeButtonProgress } from 'react-awesome-button';
 import AwesomeButtonCssModule from 'react-awesome-button/dist/styles.css';
 
 
@@ -23,7 +23,7 @@ export default function Header(){
     return(
         <header className="Header">
             {/* <h1>NotePad App</h1> */}
-            <img src={logo} />
+            <img src={logo} alt="karim notepad app logo" />
             <AwesomeButtonProgress 
                 loadingLabel='Clearing...'
                 resultLabel='All Cleared!'
