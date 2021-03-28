@@ -1,0 +1,11 @@
+.Row {
+    background: #EF716D;
+    color: #F8EFE7;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    /* font-size: 14px; */
+    padding: 8px;
+    margin-bottom: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
