@@ -32,8 +32,8 @@ export default function Header(){
                 size='medium'
                 type='secondary'
                 cssModule={AwesomeButtonCssModule}
-                // disabled={false}
-                // fakePress={false}
+                disabled={false}
+                fakePress={false}
                 onPress={(element, next) => {
             
                     setTimeout(() => {

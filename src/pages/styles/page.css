@@ -1,12 +1,30 @@
+input {
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid rgb(63, 11, 47);
+    width: 90%;
+    margin: 10px auto;
+    outline: none;
+    background: #F8EFE7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10px;
+
+}
 textarea {
     font-family: 'Press Start 2P', cursive;
     border: 3px solid rgb(63, 11, 47);
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     outline: none;
     height: 100px;
     background: #F8EFE7;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 body {
