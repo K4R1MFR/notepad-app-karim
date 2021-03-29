@@ -34,6 +34,7 @@ export default function AddNote(){
             removeSessionItem('content');
             removeSessionItem('title');
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function AddNote(titre, contenu) {
