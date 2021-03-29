@@ -1,5 +1,4 @@
 import React from 'react';
-import "./styles/Routes.css";
 import { Switch, Route } from 'react-router-dom';
 import AddNote from '../pages/AddNote';
 import EditNote from '../pages/EditNote';
