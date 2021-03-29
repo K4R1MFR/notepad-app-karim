@@ -37,7 +37,6 @@ export default function Home(){
                 <AwesomeButton 
                     type="primary" 
                     onPress={() => (history.push('/pages/AddNote'))}
-                
                 >Add Note</AwesomeButton>
         </div>
     )

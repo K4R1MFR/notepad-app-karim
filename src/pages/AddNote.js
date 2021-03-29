@@ -31,21 +31,10 @@ export default function AddNote(){
         setContent(savedContent);
         //clean up
         return () => {
-            if(title){
-                setTitle(title);
-                setSessionItem('title', title);
-            } else {
                 removeSessionItem('title');
-            }
-            if(content){
-                setContent(content);
-                setSessionItem('content', content);
-            } else {
                 removeSessionItem('content');
-            }
         }
-        // 
-    }, []);
+    }, [content]);
 
     function AddNote(titre, contenu) {
         let value = [...notes, {id: notes.length, title: titre, content: contenu}];

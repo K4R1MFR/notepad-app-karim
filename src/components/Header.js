@@ -6,7 +6,9 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButtonProgress } from 'react-awesome-button';
-import AwesomeButtonCssModule from 'react-awesome-button/dist/styles.css';
+import { AwesomeButtonCssModule } from 'react-awesome-button/dist/themes/theme-rickiest.css';
+
+
 
 
 
@@ -29,9 +31,9 @@ export default function Header(){
                 resultLabel='All Cleared!'
                 size='medium'
                 type='secondary'
-                disabled={false}
-                fakePress={false}
                 cssModule={AwesomeButtonCssModule}
+                // disabled={false}
+                // fakePress={false}
                 onPress={(element, next) => {
             
                     setTimeout(() => {

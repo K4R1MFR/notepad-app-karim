@@ -25,7 +25,7 @@ export default function EditNote(){
         setNotes(storedNotes);
         setTitle(storedNotes[index].title);
         setContent(storedNotes[index].content);
-    }, []);
+    }, [index]);
     
 
     function save() {

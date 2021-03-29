@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/Row.css";
-// import { DeleteNote } from "../pages/Home";
 import { useHistory } from 'react-router-dom';
 
 
