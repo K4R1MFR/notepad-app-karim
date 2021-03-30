@@ -32,7 +32,8 @@ export default function Home(){
                     // save to local storage
                     setItem('notes', newNotes);
                 }
-                return <Row key={note.id} note={note} index={index} onDelete={deleteNote}/>
+                //using index for prop key
+                return <Row key={index} note={note} index={index} onDelete={deleteNote}/>
             })}
                 <AwesomeButton 
                     type="primary" 

@@ -8,6 +8,7 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
+//uuid
 export default function AddNote(){
 
     const [ title, setTitle ] = useState("");
@@ -16,8 +17,6 @@ export default function AddNote(){
 
     const history = useHistory();
 
-    // useEffect on load, []
-    // setTitle(getSessionItem('title', ''));
     
     const onBackClick = () => {
         history.push('/');
@@ -37,7 +36,7 @@ export default function AddNote(){
     }, []);
 
     function AddNote(titre, contenu) {
-        let value = [...notes, {id: notes.length, title: titre, content: contenu}];
+        let value = [...notes, {title: titre, content: contenu}];
         setNotes(value);
         setItem('notes', value);
         }
@@ -85,7 +84,6 @@ export default function AddNote(){
                     onPress={() => ("submit")}
                 
                 >Add Note</AwesomeButton>
-                <button type="submit">GOOOO</button>
             </form>
         </div>
     )
