@@ -8,7 +8,7 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
-//uuid
+//uuid 
 export default function AddNote(){
 
     const [ title, setTitle ] = useState("");
@@ -21,8 +21,8 @@ export default function AddNote(){
     const onBackClick = () => {
         history.push('/');
     }
-
     useEffect(() => {
+        //on start
         setNotes(getItem("notes", []));
         let savedTitle = getSessionItem("title", '');
         let savedContent = getSessionItem("content", "");
