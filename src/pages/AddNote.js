@@ -26,7 +26,7 @@ export default function AddNote(){
     useEffect(() => {
         setNotes(getItem("notes", []));
         let savedTitle = getSessionItem("title", '');
-        let savedContent = getSessionItem("content", content);
+        let savedContent = getSessionItem("content", "");
         setTitle(savedTitle);
         setContent(savedContent);
         //clean up
@@ -34,7 +34,6 @@ export default function AddNote(){
             removeSessionItem('content');
             removeSessionItem('title');
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function AddNote(titre, contenu) {
@@ -43,7 +42,7 @@ export default function AddNote(){
         setItem('notes', value);
         }
 
-        function AddAndBack(titre, contenu) {
+        function AddAndBack() {
             AddNote(title, content);
             setTitle("");
             onBackClick();
@@ -58,7 +57,7 @@ export default function AddNote(){
         <div className="AddNote">
             <h1>Add Note Page</h1>
             <form 
-                onSubmit={() => AddAndBack(title, content)} 
+                onSubmit={AddAndBack} 
             >
                 <label>Title: 
                     <input 
@@ -86,6 +85,7 @@ export default function AddNote(){
                     onPress={() => ("submit")}
                 
                 >Add Note</AwesomeButton>
+                <button type="submit">GOOOO</button>
             </form>
         </div>
     )
