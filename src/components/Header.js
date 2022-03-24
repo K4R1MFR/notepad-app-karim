@@ -12,21 +12,21 @@ import { AwesomeButtonCssModule } from 'react-awesome-button/dist/themes/theme-r
 
 
 
-export default function Header(){
+export default function Header() {
 
     const history = useHistory();
 
-    function ClearAll(){
+    function ClearAll() {
         removeItem('notes');
         history.push('/');
         window.location.reload();
     }
 
-    return(
+    return (
         <header className="Header">
             {/* <h1>NotePad App</h1> */}
-            <img src={logo} alt="karim notepad app logo" />
-            <AwesomeButtonProgress 
+            <a href="/"><img src={logo} alt="karim notepad app logo" /></a>
+            <AwesomeButtonProgress
                 loadingLabel='Clearing...'
                 resultLabel='All Cleared!'
                 size='medium'
@@ -35,15 +35,15 @@ export default function Header(){
                 disabled={false}
                 fakePress={false}
                 onPress={(element, next) => {
-            
+
                     setTimeout(() => {
-                    ClearAll();
-                    next();
+                        ClearAll();
+                        next();
                     }, 1000);
                 }}
-                >
+            >
                 Clear All
-           </AwesomeButtonProgress>
+            </AwesomeButtonProgress>
         </header>
     )
 }

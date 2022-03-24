@@ -9,15 +9,15 @@ import {
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
 //uuid 
-export default function AddNote(){
+export default function AddNote() {
 
-    const [ title, setTitle ] = useState("");
-    const [ content, setContent ] = useState("");
-    const [ notes, setNotes ] = useState([]);
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+    const [notes, setNotes] = useState([]);
 
     const history = useHistory();
 
-    
+
     const onBackClick = () => {
         history.push('/');
     }
@@ -36,53 +36,55 @@ export default function AddNote(){
     }, []);
 
     function AddNote(titre, contenu) {
-        let value = [...notes, {title: titre, content: contenu}];
+        let value = [...notes, { title: titre, content: contenu }];
         setNotes(value);
         setItem('notes', value);
-        }
+    }
 
-        function AddAndBack() {
+    function AddAndBack() {
+        if (title === '') {
+            alert('please enter a title first.')
+        } else {
             AddNote(title, content);
             setTitle("");
             onBackClick();
-            
-
         }
+    }
 
 
-    
 
-    return(
+
+    return (
         <div className="AddNote">
             <h1>Add Note Page</h1>
-            <form 
-                onSubmit={AddAndBack} 
+            <form
+                onSubmit={AddAndBack}
             >
-                <label>Title: 
-                    <input 
-                        type="text" 
-                        value={title} 
+                <label>Title:
+                    <input
+                        type="text"
+                        value={title}
                         onChange={(event) => {
                             setTitle(event.target.value);
                             setSessionItem('title', event.target.value);
-                        }} 
+                        }}
                     />
                 </label>
-                <hr/>
-                <label>Content: 
-                    <textarea 
-                        type="text" 
-                        value={content} 
+                <hr />
+                <label>Content:
+                    <textarea
+                        type="text"
+                        value={content}
                         onChange={(event) => {
                             setContent(event.target.value);
                             setSessionItem('content', event.target.value);
-                        }} 
+                        }}
                     />
                 </label>
-                <AwesomeButton 
+                <AwesomeButton
                     type="primary"
                     onPress={() => ("submit")}
-                
+
                 >Add Note</AwesomeButton>
             </form>
         </div>

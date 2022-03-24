@@ -11,21 +11,22 @@ export default function Row(props) {
 
 
 
-    function EditThisNote(){
+    function EditThisNote() {
         history.push('/pages/EditNote/' + props.index);
     }
 
-    return(
+    return (
         <div className="Row">
 
             {/* div to click to edit note */}
             <div onClick={() => EditThisNote()}>
 
-                <h3>{props.index} - {props.note.title}</h3>
+                <h3>{props.index + 1} - {props.note.title}</h3>
             </div>
 
             {/* button to delete note */}
             <button
+                className="delete-button"
                 onClick={props.onDelete}
             >Delete</button>
         </div>
