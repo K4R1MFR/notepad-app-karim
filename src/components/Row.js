@@ -21,7 +21,7 @@ export default function Row(props) {
             {/* div to click to edit note */}
             <div onClick={() => EditThisNote()}>
 
-                <h3>{props.index + 1} - {props.note.title}</h3>
+                <div>{props.index + 1} - {props.note.title}</div>
             </div>
 
             {/* button to delete note */}

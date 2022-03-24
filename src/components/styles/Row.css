@@ -3,11 +3,13 @@
   color: #f8efe7;
   font-family: "Press Start 2P", cursive;
   text-align: center;
-  /* font-size: 14px; */
+  font-size: 36px;
+  font-weight: bold;
+  width: 90%;
   padding: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .delete-button {
@@ -16,4 +18,5 @@
   background-color: #f8efe7;
   color: #ef716d;
   font-weight: bold;
+  font-size: medium;
 }
