@@ -8,12 +8,13 @@ import {
 } from '../services/storage';
 import { useHistory } from 'react-router-dom';
 import { AwesomeButton } from 'react-awesome-button';
-//uuid 
+
 export default function AddNote() {
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [notes, setNotes] = useState([]);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const history = useHistory();
 
@@ -42,8 +43,8 @@ export default function AddNote() {
     }
 
     function AddAndBack() {
-        if (title === '') {
-            alert('please enter a title first.')
+        if (title === "") {
+            setErrorMessage('Please enter a title here first.')
         } else {
             AddNote(title, content);
             setTitle("");
@@ -51,42 +52,34 @@ export default function AddNote() {
         }
     }
 
-
-
-
     return (
         <div className="AddNote">
             <h1>Add Note Page</h1>
-            <form
-                onSubmit={AddAndBack}
-            >
-                <label>Title:
-                    <input
-                        type="text"
-                        value={title}
-                        onChange={(event) => {
-                            setTitle(event.target.value);
-                            setSessionItem('title', event.target.value);
-                        }}
-                    />
-                </label>
-                <hr />
-                <label>Content:
-                    <textarea
-                        type="text"
-                        value={content}
-                        onChange={(event) => {
-                            setContent(event.target.value);
-                            setSessionItem('content', event.target.value);
-                        }}
-                    />
-                </label>
-                <AwesomeButton
-                    type="primary"
-                    onPress={() => ("submit")}
-
-                >Add Note</AwesomeButton>
-            </form>
+            <label>Title:
+                <input
+                    type="text"
+                    value={title}
+                    placeholder={errorMessage}
+                    onChange={(event) => {
+                        setTitle(event.target.value);
+                        setSessionItem('title', event.target.value);
+                    }}
+                />
+            </label>
+            <label>Content:
+                <textarea
+                    type="text"
+                    value={content}
+                    onChange={(event) => {
+                        setContent(event.target.value);
+                        setSessionItem('content', event.target.value);
+                    }}
+                />
+            </label>
+            <AwesomeButton
+                type="primary"
+                onPress={AddAndBack}
+            >Add Note</AwesomeButton>
         </div>
     )
 }
